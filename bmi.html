@@ -6,8 +6,22 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<div class="container">
+    <div class="wrapper">
+        <h1>Oblicz swoje BMI</h1>
+        <p class="description">Sprawdź, czy twoja masa ciała jest prawidłowa</p>
+        <form>
+            <label for="weight">Waga:</label>
+            <input type="text" name="weight" class="weight" id="weight">
+            <label for="height" class="height">Wzrost:</label>
+            <input type="text" name="height" class="height" id="height">
+        </form>
+        <button class="calc">Oblicz BMI</button>
+    </div>
+</div>
+<script src="bmi.js"></script>
 </body>
 </html>
