@@ -6,6 +6,9 @@ const modal = document.getElementsByClassName('modal')[0];
 const mask = document.getElementsByClassName('mask')[0];
 let resultTitle = document.getElementsByTagName('h2')[0];
 let resultText = document.getElementsByClassName('results')[0];
+let smallText = document.getElementsByClassName("small-text")[0];
+const commaValue = /,/;
+const numberRegEx = /[0-9]+/;
 
 function showResult() {
     mask.style.display = 'block';
@@ -18,12 +21,17 @@ function closeResult() {
 }
 
 function countBmi() {
-    if (isNaN(weight.value) || isNaN(height.value)) {
+    if (!numberRegEx.test(weight.value) || !numberRegEx.test(height.value)) {
         console.warn("podaj liczbę");
+        showResult();
+        resultTitle.innerHTML = "Podane dane są nieprawidłowe";
+        smallText.style.display = "none";
     } else if (weight.value == "" || height.value == "") {
         return;
-    } else {
-        let bmi = weight.value / (height.value * height.value);
+    } else if (commaValue.test(weight.value) || commaValue.test(height.value)) {
+       let weightC = weight.value.replace(commaValue, ".");
+       let heightC = height.value.replace(commaValue, ".") / 100;
+        let bmi = weightC / (heightC * heightC);
         showResult();
         if (bmi < 16) {
             resultTitle.innerHTML = "Wygłodzenie";

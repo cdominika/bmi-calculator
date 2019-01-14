@@ -28,3 +28,9 @@ html, body {
  left: 0;
  margin: auto auto;
 }
+
+.small-text {
+ text-transform: uppercase;
+ font-size: 12px;
+ margin-bottom: -10px;
+}
