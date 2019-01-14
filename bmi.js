@@ -28,10 +28,16 @@ function countBmi() {
         smallText.style.display = "none";
     } else if (weight.value == "" || height.value == "") {
         return;
-    } else if (commaValue.test(weight.value) || commaValue.test(height.value)) {
-       let weightC = weight.value.replace(commaValue, ".");
-       let heightC = height.value.replace(commaValue, ".") / 100;
-        let bmi = weightC / (heightC * heightC);
+        }
+    if (commaValue.test(weight.value) || commaValue.test(height.value)) {
+        let weightC = weight.value.replace(commaValue, ".");
+        let heightC = height.value.replace(commaValue, ".") / 100;
+        bmi = weightC / (heightC * heightC);
+    } else {
+        let weightC = weight.value;
+        let heightC = height.value / 100;
+        bmi = weightC / (heightC * heightC);
+        }
         showResult();
         if (bmi < 16) {
             resultTitle.innerHTML = "Wygłodzenie";
@@ -57,7 +63,7 @@ function countBmi() {
         } else if (bmi >= 40) {
             resultTitle.innerHTML = "Otyłość skrajna";
             console.log("otyłość skrajna");
-        }
+
     }
     height.value = "";
     weight.value = "";
