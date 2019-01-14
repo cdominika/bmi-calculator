@@ -1,14 +1,14 @@
-const weight = document.getElementById("weight");
-const height = document.getElementById("height");
-const button = document.getElementById("calc");
-const buttonClose = document.getElementsByClassName("close")[0];
+const weight = document.getElementById('weight');
+const height = document.getElementById('height');
+const button = document.getElementById('calc');
+const buttonClose = document.getElementsByClassName('close')[0];
 const modal = document.getElementsByClassName('modal')[0];
 const mask = document.getElementsByClassName('mask')[0];
 let resultTitle = document.getElementsByTagName('h2')[0];
 let resultText = document.getElementsByClassName('results')[0];
-let smallText = document.getElementsByClassName("small-text")[0];
+let smallText = document.getElementsByClassName('small-text')[0];
 const commaValue = /,/;
-const numberRegEx = /[0-9]+/;
+const numberRegEx = /^[0-9]+(,?)(\.?)[0-9]$/;
 
 function showResult() {
     mask.style.display = 'block';
@@ -16,8 +16,8 @@ function showResult() {
 }
 
 function closeResult() {
-    mask.style.display = "none";
-    modal.style.display = "none";
+    mask.style.display = 'none';
+    modal.style.display = 'none';
 }
 
 function countBmi() {
