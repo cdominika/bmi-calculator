@@ -39,31 +39,39 @@ function countBmi() {
         bmi = weightC / (heightC * heightC);
         }
         showResult();
-        if (bmi < 16) {
+        switch (true) {
+          case bmi < 16:
             resultTitle.innerHTML = "Wygłodzenie";
             console.log("wygłodzenie");
-        } else if (bmi >= 16 && bmi <= 16.99) {
+            break;
+          case bmi >= 16 && bmi <= 16.99:
             resultTitle.innerHTML = "Wychudzenie";
             console.log("wychudzenie");
-        } else if (bmi > 16.99 && bmi <= 18.49) {
+            break;
+          case bmi > 16.99 && bmi <= 18.49:
             resultTitle.innerHTML = "Niedowaga";
             console.log("niedowaga");
-        } else if (bmi >= 18.5 && bmi <= 24.99) {
+            break;
+          case bmi >= 18.5 && bmi <= 24.99:
             resultTitle.innerHTML = "Waga prawidłowa";
             console.log("waga prawidłowa");
-        } else if (bmi >= 25 && bmi <= 29.99) {
+            break;
+          case bmi >= 25 && bmi <= 29.99:
             resultTitle.innerHTML = "Nadwaga";
             console.log("nadwaga");
-        } else if (bmi >= 30 && bmi <= 34.99) {
+            break;
+          case bmi >= 30 && bmi <= 34.99:
             resultTitle.innerHTML = "I stopień otyłości";
             console.log("I stopień otyłości");
-        } else if (bmi >= 35 && bmi <= 39.99) {
+            break;
+          case bmi >= 35 && bmi <= 39.99:
             resultTitle.innerHTML = "II stopień otyłości";
             console.log("II stopień otyłości");
-        } else if (bmi >= 40) {
+            break;
+          case bmi >= 40:
             resultTitle.innerHTML = "Otyłość skrajna";
             console.log("otyłość skrajna");
-
+            break;
     }
     height.value = "";
     weight.value = "";
