@@ -34,3 +34,32 @@ html, body {
  font-size: 12px;
  margin-bottom: -10px;
 }
+
+.container {
+ display: grid;
+ height: 100vh;
+ grid-template-areas: "header"
+ "main"
+ "footer";
+ grid-template-rows: auto 60vh auto;
+ grid-template-columns: auto;
+}
+
+.header {
+ grid-area: header;
+ padding: 30px;
+ justify-self: center;
+ text-align: center;
+}
+
+.form {
+ grid-area: main;
+ padding: 20px;
+ justify-self: center;
+}
+
+.footer {
+ grid-area: footer;
+ padding: 20px;
+ justify-self: center;
+}

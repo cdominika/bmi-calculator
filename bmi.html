@@ -10,7 +10,6 @@
 </head>
 <body>
 <div class="container">
-    <div class="wrapper">
         <div class="mask"></div>
             <div class="modal">
                 <p class="small-text">Twój wynik to:</p>
@@ -19,8 +18,11 @@
                 <button class="close">Zamknij</button>
             </div>
 
+        <div class="header">
         <h1>Kalkulator BMI</h1>
         <p class="description">Sprawdź, czy twoja masa ciała jest prawidłowa</p>
+        </div>
+        <div class="form">
         <form>
             <label for="weight">Waga:</label>
             <input type="text" name="weight" class="weight" id="weight">
@@ -30,7 +32,9 @@
             <label for="height">cm</label>
         </form>
         <button id="calc" class="calc">Oblicz BMI</button>
-    </div>
+        </div>
+        <div class="footer"></div>
+
 </div>
 <script src="bmi.js"></script>
 </body>
