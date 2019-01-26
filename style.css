@@ -2,6 +2,9 @@
 
 html, body {
  font-family: "Nunito", sans-serif;
+ background: linear-gradient(-200deg, #1CB5E0 0%, #000851 100%);
+ color: white;
+ overflow: hidden;
 }
 
 .mask {
@@ -39,15 +42,18 @@ html, body {
  display: grid;
  height: 100vh;
  grid-template-areas: "header"
+ "desc"
  "main"
  "footer";
- grid-template-rows: auto 60vh auto;
+ grid-template-rows: auto auto 40vh auto;
  grid-template-columns: auto;
 }
 
 .header {
  grid-area: header;
- padding: 30px;
+ padding-left: 50px;
+ padding-right: 50px;
+ padding-top: 30px;
  justify-self: center;
  text-align: center;
 }
@@ -60,6 +66,62 @@ html, body {
 
 .footer {
  grid-area: footer;
- padding: 20px;
+ padding: 50px;
  justify-self: center;
+}
+
+.description {
+ grid-area: desc;
+ font-size: 14px;
+ max-width: 65vw;
+ margin-top: -10px;
+}
+
+input {
+ max-width: 70px;
+ height: 22px;
+ background-color: rgba(0, 8, 81, 0.1);
+ padding: 10px;
+ text-align: center;
+ outline: none;
+ border: none;
+ margin-top: 20px;
+ margin: 10px;
+ border-radius: 10px;
+ font-family: inherit;
+ color: #ffffff;
+}
+
+::placeholder {
+ color: rgba(255, 255, 255, 0.5);
+}
+
+.input-box {
+ display: block;
+ padding-left: 70px;
+}
+
+label {
+ text-align: right;
+ float: left;
+ margin-top: 18px;
+}
+
+h1 {
+ font-size: 36px;
+ font-weight: 600;
+}
+
+.calc {
+ background-color: #D49558;
+ color: white;
+ border: none;
+ padding: 10px;
+ width: 100px;
+ font-size: 14px;
+ font-weight: 600;
+ border-radius: 20px;
+ margin-top: 20px;
+ margin-left: 30px;
+ font-family: inherit;
 }
